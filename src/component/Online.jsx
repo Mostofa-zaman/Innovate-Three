@@ -1,64 +1,66 @@
-import React from "react";
-import Services from "./Services";
-import Cross from "./Cross";
-import Dot from "./Dot";
-
-import ServicesImageOne from "../assets/service1.png";
-import ServicesImageTwo from "../assets/service2.png";
-import ServicesImageThree from "../assets/service3.png";
-import DotOne from "../assets/dotline3.png";
-import Ring from "./Ring";
-
-
 const Online = () => {
   return (
-    <section className="relative py-[60px] bg-[#FCF8F8]  ">
-      <div className="absolute top-[0px] right-[0px]">
+    <section className="relative py-[40px] md:py-[60px] bg-[#FCF8F8] overflow-hidden">
+      
+      {/* Decorative elements (hide on small devices) */}
+      <div className="hidden lg:block absolute top-0 right-0">
         <img src={DotOne} alt="DotOne" />
       </div>
-       <div  className="absolute  top-[50%] left-[30px] -translate-y-full">
-        <Ring className={"border-[#8773EF]"}/>
+
+      <div className="hidden lg:block absolute top-1/2 left-[30px] -translate-y-full">
+        <Ring className={"border-[#8773EF]"} />
       </div>
-      <div className="absolute flex gap-x-[5px] left-[50%] top-[130px] translate-x-full">
+
+      <div className="hidden lg:flex absolute gap-x-[5px] left-1/2 top-[130px] translate-x-full">
         <Cross className={"w-[12px]"} />
         <Cross className={"w-[12px]"} />
         <Cross className={"w-[12px]"} />
       </div>
-      <div className="absolute top-[50%] left-[20px] -translate-y-full">
+
+      <div className="hidden lg:block absolute top-1/2 left-[20px] -translate-y-full">
         <Dot className={"bg-[#FF7628]"} />
       </div>
-      <div className="max-w-[1320px] mx-auto">
-        <div className="pb-[64px] text-[56px] text-primary font-bold font-opensans w-[732px]">
+
+      {/* Content */}
+      <div className="max-w-[1320px] mx-auto px-4">
+        
+        {/* Heading */}
+        <div className="pb-[40px] md:pb-[64px] 
+          text-[32px] md:text-[44px] lg:text-[56px] 
+          text-primary font-bold font-opensans 
+          max-w-full lg:w-[732px]
+          text-center lg:text-left">
           We help you to go online and increase your sales
         </div>
-        <div className="grid grid-cols-3 gap-x-[65px]">
-          <div>
-            <Services
-              src={ServicesImageOne}
-              heading={"eCommerce Consulting"}
-              paragraph={
-                "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the  hearts of their consumers."
-              }
-            />
-          </div>
-          <div>
-            <Services
-              src={ServicesImageTwo}
-              heading={"eCommerce Consulting"}
-              paragraph={
-                "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the  hearts of their consumers."
-              }
-            />
-          </div>
-          <div>
-            <Services
-              src={ServicesImageThree}
-              heading={"eCommerce Consulting"}
-              paragraph={
-                "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the  hearts of their consumers."
-              }
-            />
-          </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+          gap-y-[40px] md:gap-y-[50px] 
+          gap-x-[30px] lg:gap-x-[65px]">
+          
+          <Services
+            src={ServicesImageOne}
+            heading={"eCommerce Consulting"}
+            paragraph={
+              "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the hearts of their consumers."
+            }
+          />
+
+          <Services
+            src={ServicesImageTwo}
+            heading={"eCommerce Consulting"}
+            paragraph={
+              "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the hearts of their consumers."
+            }
+          />
+
+          <Services
+            src={ServicesImageThree}
+            heading={"eCommerce Consulting"}
+            paragraph={
+              "Better eCommerce businesses by creating joyful digital ideas and experiences that connect the hearts of their consumers."
+            }
+          />
         </div>
       </div>
     </section>

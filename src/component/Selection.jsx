@@ -9,14 +9,12 @@ import TailImage from "../assets/tail1.png";
 const Selection = () => {
   return (
     <section className="py-[60px] lg:py-[100px] relative">
-      
       {/* Decorative Image */}
       <div className="absolute bottom-[18%] right-0 hidden lg:block">
         <img src={TailImage} alt="TailImage" />
       </div>
 
       <div className="max-w-[1320px] mx-auto px-4">
-        
         {/* Header */}
         <div className="pl-0 lg:pl-[40px] text-center lg:text-left">
           <h2 className="font-opensans font-bold text-[32px] sm:text-[44px] lg:text-[56px] text-primary">
@@ -29,24 +27,27 @@ const Selection = () => {
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-x-[35px] pt-[60px] lg:pt-[150px]">
-          
-          <SelectionCard
-            imageName={NatureOne}
-            imageClassName="h-auto lg:h-[688px]"
-            batchOverlayClassName="bottom-[-30px] right-0"
-            heading={"01. Fresh & Care (Grocery Store)"}
-          />
+          {/* Card 01 */}
+          <div className="mb-16 md:mb-0">
+            <SelectionCard
+              imageName={NatureOne}
+              imageClassName="h-auto lg:h-[688px]"
+              batchOverlayClassName="bottom-[50px] right-0"
+              heading={"01. Fresh & Care (Grocery Store)"}
+            />
+          </div>
 
+          {/* Card 02 */}
           <SelectionCard
             imageName={NatureTwo}
             imageClassName="h-auto lg:h-[598px]"
-            batchOverlayClassName="top-[-40px] right-0"
+            batchOverlayClassName="top-[40px] right-0"
             heading={"02. Purl house (Jewellary Store)"}
             maindivClassName="lg:top-[-70px]"
           />
 
+          {/* Card 03 */}
           <SelectionCard
             imageName={NatureThree}
             imageClassName="h-auto lg:h-[752px]"
@@ -54,7 +55,6 @@ const Selection = () => {
             heading={"03. Fashionate (Clothing Store)"}
             maindivClassName="lg:top-[-40%]"
           />
-
         </div>
       </div>
     </section>

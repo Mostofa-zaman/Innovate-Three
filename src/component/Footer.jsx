@@ -3,151 +3,93 @@ import FooterLogo from "../assets/footerlogo.png";
 const Footer = () => {
   return (
     <footer className="bg-[#19153D]">
-      <div className="max-w-[1320px] mx-auto pt-[140px] pb-[57px]    md:grid grid-cols-5 gap-6 ">
-        <div className=" col-span-2">
-          <img src={FooterLogo} alt="" className="w-[110px]" />
-          <p className=" font-normal text-[#fff] pt-[44px]">
+      {/* Top */}
+      <div className="max-w-[1320px] mx-auto px-4 pt-[80px] lg:pt-[140px] pb-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        {/* Logo & Text */}
+        <div className="lg:col-span-2 text-center lg:text-left">
+          <img src={FooterLogo} alt="FooterLogo" className="w-[110px] mx-auto lg:mx-0" />
+          <p className="font-normal text-[#fff] pt-[30px] max-w-[520px] mx-auto lg:mx-0">
             Install any demo or template with a single click. You can mix and
             match all the demos & templates. Every demo can be turned into one
             or multi-page.
           </p>
         </div>
-        <div className="">
-          <ul className="flex flex-col items-center gap-y-[30px]">
-            <li className="mb-[12px]">
-              <a
-                href="#"
-                className="text-[24px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
+
+        {/* Features */}
+        <div>
+          <ul className="flex flex-col items-center lg:items-start gap-y-[18px]">
+            <li className="mb-[8px]">
+              <a className="text-[22px] text-white font-semibold font-nunito">
                 Features
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Benifit
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Pricing
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Blog
-              </a>
-            </li>
+            {["Home", "About", "Benifit", "Pricing", "Blog"].map((item, i) => (
+              <li key={i}>
+                <a className="text-[18px] text-white font-semibold font-nunito">
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-        <div className="">
-          <ul className="flex flex-col items-center gap-y-[30px]">
-            <li className="mb-[12px]">
-              <a
-                href="#"
-                className="text-[24px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
+
+        {/* Products */}
+        <div>
+          <ul className="flex flex-col items-center lg:items-start gap-y-[18px]">
+            <li className="mb-[8px]">
+              <a className="text-[22px] text-white font-semibold font-nunito">
                 Products
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Task Management
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Company growth
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Time tracking
-              </a>
-            </li>
+            {["Task Management", "Company growth", "Time tracking"].map(
+              (item, i) => (
+                <li key={i}>
+                  <a className="text-[18px] text-white font-semibold font-nunito">
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
-        <div className="">
-          <ul className="flex flex-col items-center gap-y-[30px]">
-            <li className="mb-[12px]">
-              <a
-                href="#"
-                className="text-[24px] text-[#fff] font-semibold leading-[120%] font-nunito  "
-              >
+
+        {/* Support */}
+        <div>
+          <ul className="flex flex-col items-center lg:items-start gap-y-[18px]">
+            <li className="mb-[8px]">
+              <a className="text-[22px] text-white font-semibold font-nunito">
                 Support
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Customer service
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Accessibility
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[20px] text-[#fff] font-semibold leading-[120%] font-nunito "
-              >
-                Contact us
-              </a>
-            </li>
+            {["Customer service", "Accessibility", "Contact us"].map(
+              (item, i) => (
+                <li key={i}>
+                  <a className="text-[18px] text-white font-semibold font-nunito">
+                    {item}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>
-      <div className="pt-[80px] pb-[57px] max-w-[1320px] mx-auto flex justify-between items-center">
-        <p className="font-nunito text-[18px] leading-[180%] font-normal text-[#fff]">
-          @20201 Innovate.All rights reserved.
-        </p>
-        <div className="flex gap-x-7">
-          <p className="font-nunito text-[18px] leading-[180%] font-normal text-[#fff]">
-            Privacy policy
+
+      {/* Bottom */}
+      <div className="border-t border-white/20">
+        <div className="max-w-[1320px] mx-auto px-4 py-[30px] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="font-nunito text-[16px] md:text-[18px] text-white">
+            ©20201 Innovate. All rights reserved.
           </p>
-          <p className="font-nunito text-[18px] leading-[180%] font-normal text-[#fff]">
-            Terms & condition
-          </p>
+
+          <div className="flex gap-x-6">
+            <p className="font-nunito text-[16px] md:text-[18px] text-white">
+              Privacy policy
+            </p>
+            <p className="font-nunito text-[16px] md:text-[18px] text-white">
+              Terms & condition
+            </p>
+          </div>
         </div>
       </div>
     </footer>

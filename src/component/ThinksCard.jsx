@@ -1,21 +1,29 @@
 import React from "react";
 
-
-const ThinksCard = ({imageSrc,heading,paragraph,paragraphTwo}) => {
+const ThinksCard = ({ imageSrc, heading, paragraph, paragraphTwo }) => {
   return (
-    <div className="py-[40px] px-[20px] bg-[#fff] group">
-      <div className=" flex gap-x-[20px] justify-center">
+    <div className="py-10 px-5 sm:px-8 bg-[#fff] group">
+      {/* Top: Image + Name */}
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-x-5 justify-center items-center sm:items-start">
         <img
           src={imageSrc}
           alt="likes"
-          className="opacity-[0.45] group-hover:opacity-100 transition duration-300 ease-in-out"
+          className="opacity-45 group-hover:opacity-100 transition duration-300 ease-in-out w-[50px] sm:w-[60px] h-auto"
         />
-        <div>
-            <h6 className="font-opensans font-bold text-[24px]/[27px] text-primary "> {heading} </h6>
-            <p className="font-opensans font-medium text-[18px]/[36px] text-secondary" > {paragraph} </p>
+        <div className="text-center sm:text-start">
+          <h6 className="font-opensans font-bold text-[20px] sm:text-[22px] lg:text-[24px] text-primary">
+            {heading}
+          </h6>
+          <p className="font-opensans font-medium text-[16px] sm:text-[17px] lg:text-[18px] text-secondary">
+            {paragraph}
+          </p>
         </div>
       </div>
-      <p className="font-opensans font-medium text-[18px]/[36px] text-secondary pt-[21px] w-[350px] text-start mx-auto">{paragraphTwo}</p>
+
+      {/* Bottom: Paragraph */}
+      <p className="font-opensans font-medium text-[16px] sm:text-[17px] lg:text-[18px] text-secondary pt-5 w-full sm:w-[350px] text-center sm:text-start mx-auto">
+        {paragraphTwo}
+      </p>
     </div>
   );
 };

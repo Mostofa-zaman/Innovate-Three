@@ -1,3 +1,13 @@
+import Line from "../assets/dotline.png"
+import BaseImage from "../assets/dotline.png"
+import Net from "../assets/net.png"
+import NatureOne from "../assets/nature1.jpg"
+import Ring from "./Ring"
+import Dot from "./Dot"
+import { Accordion, AccordionContent, AccordionPanel, AccordionTitle } from "flowbite-react"
+
+
+
 const Work = () => {
   return (
     <section className="py-[60px] md:py-[80px] lg:py-[100px] relative overflow-hidden">

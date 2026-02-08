@@ -1,3 +1,16 @@
+
+import Ring from "./Ring";
+import Dot from "./Dot";
+import Cross from "./Cross";
+import MotionOne from "./MotionOne";
+import Button from "./Button";
+import BannarImages from "../assets/bannar.png";
+import TailOne from "../assets/tail1.png";
+import TailTwo from "../assets/tail2.png";
+import DotOne from "../assets/dotline.png";
+import DotTwo from "../assets/dotline2.png";
+import Puse from "../assets/puse.png";
+
 const Bannar = () => {
   return (
     <section className="pb-[80px] md:pb-[120px] pt-[120px] md:pt-[180px] relative overflow-hidden">
@@ -100,3 +113,5 @@ const Bannar = () => {
     </section>
   );
 };
+
+export default Bannar;

@@ -1,3 +1,15 @@
+
+import DotOne from "../assets/dotline.png"
+import ServicesImageOne from "../assets/service1.png"
+import ServicesImageTwo from "../assets/service2.png"
+import ServicesImageThree from "../assets/service3.png"
+import Services from "./Services"
+import Ring  from "./Ring"
+import Cross from "./Cross";
+import Dot from "./Dot";
+
+
+
 const Online = () => {
   return (
     <section className="relative py-[40px] md:py-[60px] bg-[#FCF8F8] overflow-hidden">
